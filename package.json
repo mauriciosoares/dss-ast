@@ -1,0 +1,26 @@
+{
+  "name": "dss-ast",
+  "version": "0.0.1",
+  "description": "dynamic stylesheet (with AST)",
+  "main": "index.js",
+  "scripts": {
+    "watch": "watchify src/dss.js -o build/dss.js -v"
+  },
+  "keywords": [
+    "dss",
+    "stylesheet",
+    "css",
+    "ast",
+    "gui",
+    "souza"
+  ],
+  "author": "Mauricio Soares",
+  "license": "MIT",
+  "dependencies": {
+    "css": "^2.2.1",
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "watchify": "^3.4.0"
+  }
+}

@@ -1,6 +1,6 @@
 # DSS with AST
 
-My goal here is to show a possibility of implementing the cool [DSS](https://github.com/guisouza/dss) project using [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree).
+My goal here is to show a possibility of implementing the cool [DSS](https://github.com/guisouza/dss) project using [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree). And not to reimplement DSS itself.
 
 It makes things WAY easier, and you don't have to deal with crazy ass regexes (because someone already did it for you).
 
@@ -57,7 +57,9 @@ would return:
 }]
 ```
 
-The `body` selector was ignored.
+See?? I wrote 20 lines of code, and all the magic happened :D
+
+The `body` selector was ignored, and I got an nice array with all I need.
 
 ## Coding on this project
 

@@ -1,13 +1,15 @@
 var css = require('css');
-var _ = require('lodash');
+var filter = require('prelude-es6/List/filter');
+var reduce = require('prelude-es6/List/reduce');
+
 var cssContent = document.querySelector('style[rel="dss"]');
 
 var parsed = css.parse(cssContent.innerHTML);
 
-var toParse = _.reduce(parsed.stylesheet.rules, function(toParse, selector) {
-  var validDeclarations = _.filter(selector.declarations, function(declaration) {
+var toParse = reduce(function(toParse, selector) {
+  var validDeclarations = filter(function(declaration) {
     return declaration.value.match(/\|.+\|/);
-  });
+  }, selector.declarations);
 
   if(validDeclarations.length) {
     toParse.push({
@@ -17,7 +19,7 @@ var toParse = _.reduce(parsed.stylesheet.rules, function(toParse, selector) {
   }
 
   return toParse;
-}, []);
+}, [], parsed.stylesheet.rules);
 
 
 console.log(toParse);
